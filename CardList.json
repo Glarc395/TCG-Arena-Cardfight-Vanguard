@@ -1,0 +1,25 @@
+{
+  "0": {
+    "id": "0",
+    "isToken": false,
+    "face": {
+      "front": {
+        "name": "",
+        "type": false,
+        "cost": 0,
+        "image": "",
+        "isHorizontal": false
+      },
+      "back": {
+        "name": "",
+        "type": "",
+        "cost": 0,
+        "image": "",
+        "isHorizontal": false
+      }
+    },
+    "name": "a",
+    "type": false,
+    "cost": 0
+  }
+}
