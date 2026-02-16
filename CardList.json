@@ -1,4 +1,5 @@
-"0": {
+{
+  "0": {
     "id": "0",
     "isToken": false,
     "face": {
@@ -12,5 +13,32 @@
     },
     "name": "Blaster Blade",
     "type": false,
-    "cost": 0
+    "cost": 0,
+    "Grade": "2",
+    "Clan": "Royal Paladin",
+    "Power": "10000",
+    "Shield": "5000",
+    "Critical": "1"
+  },
+  "1": {
+    "id": "1",
+    "isToken": false,
+    "face": {
+      "front": {
+        "name": "",
+        "type": false,
+        "cost": 0,
+        "image": "",
+        "isHorizontal": false
+      }
+    },
+    "name": "",
+    "type": false,
+    "cost": 0,
+    "Grade": 0,
+    "Clan": "",
+    "Power": 0,
+    "Shield": 0,
+    "Critical": 0
   }
+}
