@@ -1,25 +1,16 @@
-{
-  "0": {
+"0": {
     "id": "0",
     "isToken": false,
     "face": {
       "front": {
-        "name": "",
+        "name": "Blaster Blade",
         "type": false,
         "cost": 0,
-        "image": "",
-        "isHorizontal": false
-      },
-      "back": {
-        "name": "",
-        "type": "",
-        "cost": 0,
-        "image": "",
+        "image": "https://en.cf-vanguard.com/wordpress/wp-content/images/cardlist/dzss08/dzss08_Re45.png",
         "isHorizontal": false
       }
     },
-    "name": "a",
+    "name": "Blaster Blade",
     "type": false,
     "cost": 0
   }
-}
