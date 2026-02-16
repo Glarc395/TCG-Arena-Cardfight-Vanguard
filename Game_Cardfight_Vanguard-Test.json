@@ -1,8 +1,99 @@
 {
-    "name": "Cardfight Vanguard [test]",
-    "menuBackgroundImage": "https://github.com/Glarc395/TCG-Arena-Cardfight-Vanguard/blob/main/banner.jpg?raw=true",
-    "deckBuilding": {
-       
-
+  "name": "Cardfight Vanguard",
+  "menuBackgroundImage": "https://github.com/Glarc395/TCG-Arena-Cardfight-Vanguard/blob/main/banner.jpg?raw=true",
+  "defaultRessources": {
+    "backgrounds": [],
+    "decksUrl": ""
+  },
+  "customHelp": "",
+  "cardRotation": "90",
+  "cards": {
+    "dataUrl": "https://github.com/Glarc395/TCG-Arena-Cardfight-Vanguard/blob/main/CardList.json",
+    "cardBack": "https://static.wikia.nocookie.net/cardfight/images/1/1c/Sleeve133.png/revision/latest?cb=20160712170330"
+  },
+  "deckBuilding": {
+    "mainFilters": [],
+    "formats": [
+      {
+        "title": "Standard",
+        "gameplay": "",
+        "customCategories": []
+      },
+      {
+        "title": "V premium",
+        "gameplay": "",
+        "customCategories": []
+      },
+      {
+        "title": "Premium",
+        "gameplay": "",
+        "customCategories": []
+      }
+    ]
+  },
+  "gameplay": {
+    "Classic": {
+      "mulligan": {
+        "info": "",
+        "startingHandSize": "5",
+        "drawNewHand": true,
+        "putSelectionAtBottom": false,
+        "drawNewSelectedCards": false
+      },
+      "newTurn": {
+        "drawOnStart": false,
+        "sharedTurn": false,
+        "firstPlayerTokenName": "",
+        "drawPerTurn": 1
+      },
+      "defaultNotes": "",
+      "tokens": [],
+      "countersStartingValues": [
+        0
+      ],
+      "hideFacedDownCards": false,
+      "sections": {
+        "customSections": [
+          "Rearguard_1",
+          "Vanguard",
+          "Rearguard_2",
+          "Rearguard_3",
+          "Rearguard_4",
+          "Rearguard_5",
+          "Deck",
+          "discard zone",
+          "damage zone",
+          "zona di innesco"
+        ],
+        "layout": {
+          "direction": "row",
+          "isSymetricalForOpponents": false,
+          "content": []
+        },
+        "categoriesAlreadyOnBoard": [],
+        "autoPlayFromHand": {},
+        "autoPlayFromStack": {},
+        "sectionsDict": {
+          "Mana": {
+            "title": "Mana",
+            "isHidden": "yes",
+            "height": "SMALL",
+            "alignment": "START",
+            "opponentAlignment": false,
+            "noAutoPayTo": "true",
+            "isHorizontalAllowed": false,
+            "displayedTitle": "Ressources",
+            "enterTapped": false,
+            "enterSpun": false,
+            "isGroupForbidden": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false,
+            "noQuickActions": false
+          }
+        }
+      }
     }
+  }
+}
+
 
