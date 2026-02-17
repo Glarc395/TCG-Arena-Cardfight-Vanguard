@@ -37,11 +37,11 @@
   "gameplay": {
     "Standard": {
       "mulligan": {
-        "info": "Draw again five cards",
+        "info": "Draw again the number of cards that you choose",
         "startingHandSize": "5",
         "drawNewHand": true,
         "putSelectionAtBottom": false,
-        "drawNewSelectedCards": false
+        "drawNewSelectedCards": true
       },
       "newTurn": {
         "drawOnStart": true,
@@ -52,7 +52,7 @@
       "defaultNotes": "",
       "tokens": [],
       "countersStartingValues": [
-        "40"
+        "39"
       ],
       "hideFacedDownCards": false,
       "sections": {
@@ -66,7 +66,11 @@
           "Deck",
           "Discard_zone",
           "Damage_zone",
-          "Trigger_zone"
+          "Trigger_zone",
+          "Guardian",
+          "Ride_deck",
+          "Trigger_zone",
+          "Order_zone"
         ],
         "layout": {
           "direction": "row",
@@ -74,11 +78,22 @@
           "content": [
             {
               "direction": "column",
-              "style": {
-                "width": "93vh",
-                "marginRight": "auto",
-                "marginLeft": "auto"
-              },
+              "style": false,
+              "content": [
+                {
+                  "section": "Order_zone",
+                  "style": false
+                },
+                {
+                  "section": "Damage_zone",
+                  "style": false
+                }
+              ],
+              "isSymetricalForOpponents": false
+            },
+            {
+              "direction": "column",
+              "style": false,
               "content": [
                 {
                   "direction": "row",
@@ -86,21 +101,15 @@
                   "content": [
                     {
                       "section": "Rearguard_1",
-                      "style": {
-                        "marginRight": "4vh"
-                      }
+                      "style": false
                     },
                     {
                       "section": "Vanguard",
-                      "style": {
-                        "marginRight": "4vh"
-                      }
+                      "style": false
                     },
                     {
                       "section": "Rearguard_2",
-                      "style": {
-                        "marginRight": "4vh"
-                      }
+                      "style": false
                     }
                   ],
                   "isSymetricalForOpponents": false
@@ -111,15 +120,11 @@
                   "content": [
                     {
                       "section": "Rearguard_3",
-                      "style": {
-                        "marginRight": "4vh"
-                      }
+                      "style": false
                     },
                     {
                       "section": "Rearguard_4",
-                      "style": {
-                        "marginRight": "4vh"
-                      }
+                      "style": false
                     },
                     {
                       "section": "Rearguard_5",
@@ -127,6 +132,36 @@
                     }
                   ],
                   "isSymetricalForOpponents": false
+                }
+              ],
+              "isSymetricalForOpponents": false
+            },
+            {
+              "direction": "column",
+              "style": false,
+              "content": [
+                {
+                  "section": "Trigger_zone",
+                  "style": false
+                },
+                {
+                  "direction": "row",
+                  "style": false,
+                  "content": [
+                    {
+                      "section": "Deck",
+                      "style": false
+                    },
+                    {
+                      "section": "Ride_deck",
+                      "style": false
+                    }
+                  ],
+                  "isSymetricalForOpponents": false
+                },
+                {
+                  "section": "Discard_zone",
+                  "style": false
                 }
               ],
               "isSymetricalForOpponents": false
@@ -139,15 +174,191 @@
         "autoPlayFromHand": {},
         "autoPlayFromStack": {},
         "sectionsDict": {
-          "Mana": {
-            "title": "Mana",
-            "isHidden": "yes",
-            "height": "SMALL",
-            "alignment": "START",
+          "Rearguard_1": {
+            "title": "Rearguard_1",
+            "isHidden": "no",
+            "height": "MEDIUM",
+            "alignment": "CENTER",
             "opponentAlignment": false,
             "noAutoPayTo": true,
-            "isHorizontalAllowed": false,
-            "displayedTitle": "Ressources",
+            "isHorizontalAllowed": true,
+            "displayedTitle": "Rearguard",
+            "noQuickActions": false,
+            "enterTapped": false,
+            "enterSpun": false,
+            "isGroupForbidden": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false
+          },
+          "Vanguard": {
+            "title": "Vanguard",
+            "isHidden": "no",
+            "height": "MEDIUM",
+            "alignment": "CENTER",
+            "opponentAlignment": false,
+            "noAutoPayTo": true,
+            "isHorizontalAllowed": true,
+            "displayedTitle": "",
+            "noQuickActions": false,
+            "enterTapped": false,
+            "enterSpun": false,
+            "isGroupForbidden": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false
+          },
+          "Rearguard_2": {
+            "title": "New_Section",
+            "isHidden": "no",
+            "height": "SMALL",
+            "alignment": "CENTER",
+            "opponentAlignment": false,
+            "noAutoPayTo": false,
+            "isHorizontalAllowed": true,
+            "displayedTitle": "",
+            "noQuickActions": false,
+            "enterTapped": false,
+            "enterSpun": false,
+            "isGroupForbidden": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false
+          },
+          "Rearguard_3": {
+            "title": "New_Section",
+            "isHidden": "no",
+            "height": "SMALL",
+            "alignment": "CENTER",
+            "opponentAlignment": false,
+            "noAutoPayTo": false,
+            "isHorizontalAllowed": true,
+            "displayedTitle": "",
+            "noQuickActions": false,
+            "enterTapped": false,
+            "enterSpun": false,
+            "isGroupForbidden": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false
+          },
+          "Rearguard_4": {
+            "title": "New_Section",
+            "isHidden": "no",
+            "height": "SMALL",
+            "alignment": "CENTER",
+            "opponentAlignment": false,
+            "noAutoPayTo": false,
+            "isHorizontalAllowed": true,
+            "displayedTitle": "",
+            "noQuickActions": false,
+            "enterTapped": false,
+            "enterSpun": false,
+            "isGroupForbidden": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false
+          },
+          "Rearguard_5": {
+            "title": "New_Section",
+            "isHidden": "no",
+            "height": "SMALL",
+            "alignment": "CENTER",
+            "opponentAlignment": false,
+            "noAutoPayTo": false,
+            "isHorizontalAllowed": true,
+            "displayedTitle": "",
+            "noQuickActions": false,
+            "enterTapped": false,
+            "enterSpun": false,
+            "isGroupForbidden": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false
+          },
+          "Order_zone": {
+            "title": "New_Section",
+            "isHidden": "no",
+            "height": "SMALL",
+            "alignment": "CENTER",
+            "opponentAlignment": false,
+            "noAutoPayTo": false,
+            "isHorizontalAllowed": true,
+            "displayedTitle": "",
+            "noQuickActions": false,
+            "enterTapped": false,
+            "enterSpun": false,
+            "isGroupForbidden": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false
+          },
+          "Damage_zone": {
+            "title": "New_Section",
+            "isHidden": "no",
+            "height": "SMALL",
+            "alignment": "CENTER",
+            "opponentAlignment": false,
+            "noAutoPayTo": false,
+            "isHorizontalAllowed": true,
+            "displayedTitle": "",
+            "noQuickActions": false,
+            "enterTapped": false,
+            "enterSpun": false,
+            "isGroupForbidden": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false
+          },
+          "Trigger_zone": {
+            "title": "New_Section",
+            "isHidden": "no",
+            "height": "SMALL",
+            "alignment": "CENTER",
+            "opponentAlignment": false,
+            "noAutoPayTo": false,
+            "isHorizontalAllowed": true,
+            "displayedTitle": "",
+            "noQuickActions": false,
+            "enterTapped": false,
+            "enterSpun": false,
+            "isGroupForbidden": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false
+          },
+          "Deck": {
+            "title": "New_Section",
+            "isHidden": "no",
+            "height": "SMALL",
+            "alignment": "CENTER",
+            "opponentAlignment": false,
+            "noAutoPayTo": false,
+            "isHorizontalAllowed": true,
+            "displayedTitle": "",
+            "noQuickActions": false,
+            "enterTapped": false,
+            "enterSpun": false,
+            "isGroupForbidden": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false
+          },
+          "Ride_deck": {
+            "title": "New_Section",
+            "isHidden": "no",
+            "height": "SMALL",
+            "alignment": "CENTER",
+            "opponentAlignment": false,
+            "noAutoPayTo": false,
+            "isHorizontalAllowed": true,
+            "displayedTitle": "",
+            "noQuickActions": false,
+            "enterTapped": false,
+            "enterSpun": false,
+            "isGroupForbidden": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false
+          },
+          "Discard_zone": {
+            "title": "New_Section",
+            "isHidden": "no",
+            "height": "SMALL",
+            "alignment": "CENTER",
+            "opponentAlignment": false,
+            "noAutoPayTo": false,
+            "isHorizontalAllowed": true,
+            "displayedTitle": "",
             "noQuickActions": false,
             "enterTapped": false,
             "enterSpun": false,
@@ -264,5 +475,3 @@
     }
   }
 }
-
-
