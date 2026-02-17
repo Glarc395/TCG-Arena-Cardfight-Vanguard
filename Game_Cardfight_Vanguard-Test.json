@@ -12,30 +12,156 @@
     "cardBack": "https://static.wikia.nocookie.net/cardfight/images/1/1c/Sleeve133.png/revision/latest?cb=20160712170330"
   },
   "deckBuilding": {
-    "mainFilters": [],
+    "mainFilters": [
+      "Grade",
+      "Clan"
+    ],
     "formats": [
       {
         "title": "Standard",
-        "gameplay": "",
+        "gameplay": "Standard",
         "customCategories": []
       },
       {
         "title": "V premium",
-        "gameplay": "",
+        "gameplay": "V premium",
         "customCategories": []
       },
       {
         "title": "Premium",
-        "gameplay": "",
+        "gameplay": "Premium",
         "customCategories": []
       }
     ]
   },
   "gameplay": {
-    "Classic": {
+    "Standard": {
+      "mulligan": {
+        "info": "Draw again five cards",
+        "startingHandSize": "5",
+        "drawNewHand": true,
+        "putSelectionAtBottom": false,
+        "drawNewSelectedCards": false
+      },
+      "newTurn": {
+        "drawOnStart": true,
+        "sharedTurn": false,
+        "firstPlayerTokenName": "",
+        "drawPerTurn": 1
+      },
+      "defaultNotes": "",
+      "tokens": [],
+      "countersStartingValues": [
+        "40"
+      ],
+      "hideFacedDownCards": false,
+      "sections": {
+        "customSections": [
+          "Rearguard_1",
+          "Vanguard",
+          "Rearguard_2",
+          "Rearguard_3",
+          "Rearguard_4",
+          "Rearguard_5",
+          "Deck",
+          "Discard_zone",
+          "Damage_zone",
+          "Trigger_zone"
+        ],
+        "layout": {
+          "direction": "row",
+          "isSymetricalForOpponents": true,
+          "content": [
+            {
+              "direction": "column",
+              "style": {
+                "width": "93vh",
+                "marginRight": "auto",
+                "marginLeft": "auto"
+              },
+              "content": [
+                {
+                  "direction": "row",
+                  "style": false,
+                  "content": [
+                    {
+                      "section": "Rearguard_1",
+                      "style": {
+                        "marginRight": "4vh"
+                      }
+                    },
+                    {
+                      "section": "Vanguard",
+                      "style": {
+                        "marginRight": "4vh"
+                      }
+                    },
+                    {
+                      "section": "Rearguard_2",
+                      "style": {
+                        "marginRight": "4vh"
+                      }
+                    }
+                  ],
+                  "isSymetricalForOpponents": false
+                },
+                {
+                  "direction": "row",
+                  "style": false,
+                  "content": [
+                    {
+                      "section": "Rearguard_3",
+                      "style": {
+                        "marginRight": "4vh"
+                      }
+                    },
+                    {
+                      "section": "Rearguard_4",
+                      "style": {
+                        "marginRight": "4vh"
+                      }
+                    },
+                    {
+                      "section": "Rearguard_5",
+                      "style": false
+                    }
+                  ],
+                  "isSymetricalForOpponents": false
+                }
+              ],
+              "isSymetricalForOpponents": false
+            }
+          ]
+        },
+        "categoriesAlreadyOnBoard": [
+          "Vanguard"
+        ],
+        "autoPlayFromHand": {},
+        "autoPlayFromStack": {},
+        "sectionsDict": {
+          "Mana": {
+            "title": "Mana",
+            "isHidden": "yes",
+            "height": "SMALL",
+            "alignment": "START",
+            "opponentAlignment": false,
+            "noAutoPayTo": true,
+            "isHorizontalAllowed": false,
+            "displayedTitle": "Ressources",
+            "noQuickActions": false,
+            "enterTapped": false,
+            "enterSpun": false,
+            "isGroupForbidden": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false
+          }
+        }
+      }
+    },
+    "V premium": {
       "mulligan": {
         "info": "",
-        "startingHandSize": "5",
+        "startingHandSize": 7,
         "drawNewHand": true,
         "putSelectionAtBottom": false,
         "drawNewSelectedCards": false
@@ -54,16 +180,7 @@
       "hideFacedDownCards": false,
       "sections": {
         "customSections": [
-          "Rearguard_1",
-          "Vanguard",
-          "Rearguard_2",
-          "Rearguard_3",
-          "Rearguard_4",
-          "Rearguard_5",
-          "Deck",
-          "discard zone",
-          "damage zone",
-          "zona di innesco"
+          "Mana"
         ],
         "layout": {
           "direction": "row",
@@ -80,15 +197,67 @@
             "height": "SMALL",
             "alignment": "START",
             "opponentAlignment": false,
-            "noAutoPayTo": "true",
+            "noAutoPayTo": true,
             "isHorizontalAllowed": false,
             "displayedTitle": "Ressources",
+            "noQuickActions": false,
             "enterTapped": false,
             "enterSpun": false,
             "isGroupForbidden": false,
             "keepTappedNewTurn": false,
-            "showHiddenCardInHistory": false,
-            "noQuickActions": false
+            "showHiddenCardInHistory": false
+          }
+        }
+      }
+    },
+    "Premium": {
+      "mulligan": {
+        "info": "",
+        "startingHandSize": 7,
+        "drawNewHand": true,
+        "putSelectionAtBottom": false,
+        "drawNewSelectedCards": false
+      },
+      "newTurn": {
+        "drawOnStart": false,
+        "sharedTurn": false,
+        "firstPlayerTokenName": "",
+        "drawPerTurn": 1
+      },
+      "defaultNotes": "",
+      "tokens": [],
+      "countersStartingValues": [
+        0
+      ],
+      "hideFacedDownCards": false,
+      "sections": {
+        "customSections": [
+          "Mana"
+        ],
+        "layout": {
+          "direction": "row",
+          "isSymetricalForOpponents": false,
+          "content": []
+        },
+        "categoriesAlreadyOnBoard": [],
+        "autoPlayFromHand": {},
+        "autoPlayFromStack": {},
+        "sectionsDict": {
+          "Mana": {
+            "title": "Mana",
+            "isHidden": "yes",
+            "height": "SMALL",
+            "alignment": "START",
+            "opponentAlignment": false,
+            "noAutoPayTo": true,
+            "isHorizontalAllowed": false,
+            "displayedTitle": "Ressources",
+            "noQuickActions": false,
+            "enterTapped": false,
+            "enterSpun": false,
+            "isGroupForbidden": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false
           }
         }
       }
